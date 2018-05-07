@@ -48,13 +48,14 @@ class Task:
       user='',
       password='')
     cur = conn.cursor()
+    date = datetime.datetime.now()
     status = 1
 
     cur.execute("""
     UPDATE task
-    SET status = %s
+    SET status = %s, updated_at = %s
     WHERE id = %s
-    """, (status, id))
+    """, (status, date, id))
     conn.commit()
     conn.close()
 
