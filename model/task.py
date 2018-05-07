@@ -5,10 +5,10 @@ class Task:
 
   def list(self):
     conn = psycopg2.connect(
-      host='ec2-23-23-177-166.compute-1.amazonaws.com',
-      database='d6m14jp1b2sism',
-      user='ocydywlrntdzjq',
-      password='ffaa29344211f693a75f283720dba27b3811b5807167cbdc017cef946f4c01b5')
+      host='',
+      database='',
+      user='',
+      password='')
     cur = conn.cursor()
 
     cur.execute("""
@@ -23,10 +23,10 @@ class Task:
 
   def create(self, form):
     conn = psycopg2.connect(
-      host='ec2-23-23-177-166.compute-1.amazonaws.com',
-      database='d6m14jp1b2sism',
-      user='ocydywlrntdzjq',
-      password='ffaa29344211f693a75f283720dba27b3811b5807167cbdc017cef946f4c01b5')
+      host='',
+      database='',
+      user='',
+      password='')
     cur = conn.cursor()
     date = datetime.datetime.now()
 
@@ -43,10 +43,10 @@ class Task:
 
   def done(self, id):
     conn = psycopg2.connect(
-      host='ec2-23-23-177-166.compute-1.amazonaws.com',
-      database='d6m14jp1b2sism',
-      user='ocydywlrntdzjq',
-      password='ffaa29344211f693a75f283720dba27b3811b5807167cbdc017cef946f4c01b5')
+      host='',
+      database='',
+      user='',
+      password='')
     cur = conn.cursor()
     status = 1
 
