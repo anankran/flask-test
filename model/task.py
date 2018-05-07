@@ -1,10 +1,10 @@
-import sqlite3
+import psycopg2
 import datetime
 
 class Task:
 
   def list(self):
-    conn = sqlite3.connect('tasks_app.db')
+    conn = psycopg2.connect("dbname=d2nd6r6hbl7v0q user=yjyevrzvefzlsx")
     cur = conn.cursor()
 
     cur.execute("""
@@ -18,7 +18,7 @@ class Task:
     return response
 
   def create(self, form):
-    conn = sqlite3.connect('tasks_app.db')
+    conn = psycopg2.connect("dbname=d2nd6r6hbl7v0q user=yjyevrzvefzlsx")
     cur = conn.cursor()
     date = datetime.datetime.now()
 
@@ -34,7 +34,7 @@ class Task:
     return id
 
   def done(self, id):
-    conn = sqlite3.connect('tasks_app.db')
+    conn = psycopg2.connect("dbname=d2nd6r6hbl7v0q user=yjyevrzvefzlsx")
     cur = conn.cursor()
     status = 1
 
