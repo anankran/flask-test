@@ -1,0 +1,1 @@
+CREATE TABLE task (id SERIAL, name TEXT NOT NULL, description TEXT, status INTEGER DEFAULT 0, created_at DATETIME, updated_at DATETIME);
