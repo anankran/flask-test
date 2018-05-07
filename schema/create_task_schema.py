@@ -1,13 +1,13 @@
 import sqlite3
 
 conn = sqlite3.connect('tasks_app.db')
-cursor = conn.cursor()
+cur = conn.cursor()
 
-cursor.execute("""
+cur.execute("""
 DROP TABLE IF EXISTS task
 """)
 
-cursor.execute("""
+cur.execute("""
 CREATE TABLE task (
         id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL,
@@ -18,4 +18,5 @@ CREATE TABLE task (
 );
 """)
 
+conn.commit()
 conn.close()
