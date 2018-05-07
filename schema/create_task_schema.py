@@ -4,7 +4,7 @@ conn = sqlite3.connect('tasks_app.db')
 cursor = conn.cursor()
 
 cursor.execute("""
-DROP TABLE task
+DROP TABLE IF EXISTS task
 """)
 
 cursor.execute("""
